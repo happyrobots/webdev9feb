@@ -1,0 +1,27 @@
+<div class="content_group">
+
+<h1>Welcome to...<br/><br/>
+Collaborative Web Development</h1>
+
+<h3>Workshop 1: Hands-on Client-Side Web Development
+<br/>using XHTML, CSS, and Javascript (with JQuery)<br/>
+<span style="color:#aaa">Wednesday, 9th Feb 2011 at 7-9pm</span></h3>
+
+<h5 style="margin:0">
+<%= link_to 'This', 'http://www.ntuoss.org/webdev-workshop-regn',
+:target => '_blank' %> is part of
+<%= link_to 'NTU Open Source Society', 'http://www.ntuoss.org',
+:target => "_blank" %> Workshop Series</h5>
+
+<h3><%= link_to 'Go to workshop >>', workshop_sections_path,
+:class => 'action_button' %></h3>
+
+</div>
+
+<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js",
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js",
+"rails" %>
+
+<script type="text/javascript">
+$('.action_button').button();
+</script>

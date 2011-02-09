@@ -1,0 +1,8 @@
+<%= link_to 'Back', workshop_sections_path %>
+<% if user_is_committee %>
+| <%= link_to 'Show', @workshop_section %>
+<% end %>
+
+<h1>Edit Workshop Section</h1>
+
+<%= render 'form' %>

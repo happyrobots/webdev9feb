@@ -1,0 +1,13 @@
+<div id="main_materials" class="content_group">
+<% if user_is_committee %>
+<%= link_to 'New Workshop Section', new_workshop_section_path %>
+<% end %>
+
+<ul style="list-style:none;padding:10px 20px;margin:0">
+<% @workshop_sections.each do |w| %>
+<li><%= w.order_number %>. <%= link_to w.title, w %></li>
+<% end %>
+</ul>
+
+<%= will_paginate @workshop_sections %>
+</div>

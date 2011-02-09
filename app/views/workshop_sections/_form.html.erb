@@ -1,0 +1,31 @@
+<%= form_for(@workshop_section) do |f| %>
+  <% if @workshop_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workshop_section.errors.count, "error") %> prohibited this workshop_section from being saved:</h2>
+
+      <ul>
+      <% @workshop_section.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :size => 50 %>
+    <%= f.label :order_number %>
+    <%= f.text_field :order_number, :size => 10 %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows => 5, :cols => 62 %>
+  </div>
+  <div class="field">
+    <%= f.label :external_links %><br />
+    <%= f.text_area :external_links, :rows => 5, :cols => 62 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
