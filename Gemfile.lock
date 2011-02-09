@@ -54,6 +54,7 @@ GEM
     mime-types (1.16)
     multi_json (0.0.5)
     multipart-post (1.1.0)
+    mysql2 (0.2.6)
     net-ldap (0.1.1)
     nokogiri (1.4.4)
     oa-basic (0.1.6)
@@ -137,6 +138,7 @@ DEPENDENCIES
   bluecloth
   devise
   jquery-rails
+  mysql2
   omniauth
   rails (= 3.0.3)
   sqlite3-ruby
