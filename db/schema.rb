@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(:version => 20110209092056) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "workshop_sections", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "external_links"
+    t.string   "title",          :limit => 600
+    t.string   "description",    :limit => 3000
+    t.string   "external_links", :limit => 3000
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order_number"
